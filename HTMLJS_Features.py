@@ -22,6 +22,12 @@ def getHTMLJS_Features(url):
 
         # get text
         text = soup.get_text()
+
+        ''' We get the number of all links in the page
+            Excract their Domain names
+            and then check the percentage of links that are from the same domain we are currently on
+        '''
+
         for link in soup.find_all('a'):
             link = link.get('href')
 
